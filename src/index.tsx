@@ -9,6 +9,9 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
+/**
+ * Hier starten wir und rendern unsere Applikation innerhalb des Root-Elements
+ */
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
