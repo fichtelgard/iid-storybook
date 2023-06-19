@@ -1,0 +1,64 @@
+@import "../../../assets/iid_grid.scss";
+@import "../../../assets/iid_variables.scss";
+@import "../../../assets/iid_mixins.scss";
+
+.bri-animated-icons {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  line-height: 1em;
+  .bri-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    color: inherit;
+    font-size: inherit;
+    @include animated(all, 0.15s);
+  }
+}
+.bri-animated-icon-menu-burger {
+  .menu_burger_center_02 {
+    opacity: 0;
+  }
+  &.active {
+    @extend .bri-animated-icon-menu-burger_active;
+  }
+}
+
+.bri-animated-icon-menu-burger_active {
+  .bri-icons-menu-burger-top,
+  .bri-icons-menu-burger-bottom {
+    opacity: 0;
+  }
+  .bri-icons-menu-burger-top {
+    transform: translateX(-1.2em);
+  }
+  .bri-icons-menu-burger-bottom {
+    transform: translateX(1.2em);
+  }
+  .menu_burger_center_01,
+  .menu_burger_center_02 {
+    transform-origin: 50% 50%;
+    opacity: 1;
+  }
+  .menu_burger_center_01 {
+    transform: rotateZ(-45deg);
+  }
+  .menu_burger_center_02 {
+    transform: rotateZ(45deg);
+  }
+}
+
+.bri-animated-icon-checkbox {
+  .checkbox-frame {
+    opacity: 0;
+  }
+  .checkbox-hook {
+    opacity: 0;
+  }
+  &.active {
+    @extend .bri-animated-icon-menu-burger_active;
+  }
+}
+

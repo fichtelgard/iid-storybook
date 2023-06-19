@@ -1,0 +1,17 @@
+{
+  "short_name": "IID",
+  "name": "IID",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "start_url": "http://localhost:3000",
+  "orientation": "portrait",
+  "display": "minimal-ui",
+  "lang": "de",
+  "dir": "ltr",
+  "description": "",
+  "icons": [
+  ]
+}
+
+
+

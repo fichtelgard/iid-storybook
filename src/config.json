@@ -1,0 +1,30 @@
+{
+  "name": "iid-mi2-2023-sommer",
+  "version": "0.1.0",
+  "cards": [
+    {
+      "title": "Idee",
+      "content": "Am Anfang steht eine Produktidee."
+    },
+    {
+      "title": "Research",
+      "content": "Nun erforschen wir das Thema der Idee."
+    },
+    {
+      "title": "Define",
+      "content": "Auf Basis unser Ergebnisse, planen wir das Produkt und generieren Ideen."
+    },
+    {
+      "title": "Design",
+      "content": "Nun Designen wir Interaktion, erstellen Wireframes und Prototypen kombiniert mit regelmäßigen User-Tests."
+    },
+    {
+      "title": "Deliver",
+      "content": "Nun wird alles dokumentiert, wir schreiben Styleguides, Pattern-Libraries und bereiten den Launch vor."
+    },
+    {
+      "title": "Launch",
+      "content": "Unser Produkt wird veröffentlicht und wir sorgen dafür, dass es regelmäßig aktualisiert und verbesser wird."
+    }
+  ]
+}

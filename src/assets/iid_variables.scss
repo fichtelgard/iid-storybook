@@ -1,0 +1,135 @@
+$color_primary: #1c1e21;
+$color_secondary: #0a0b0c;
+$color_tertiary: #232327;
+
+$color_brand: rgba(0,168,255,1);
+$color_accent:$color_brand;
+
+$color_dark: #16191a;
+$color_white: #f1f1f1;
+
+$color_main: $color_primary;
+
+@mixin bg_color_secondary_rgba($opacity) {
+  background-color: rgba(0,23,31, $opacity)
+}
+
+$color_body: $color_secondary;
+
+$color_red: #e10019;
+$color_orange: #f60;
+$color_yellow: #fd0;
+$color_blue: #00f;
+$color_green: #00ba50;
+
+$brand_indigo: #426f92;
+$brand_indigo_dark: #070e1f;
+
+$brand_white: #ffffff;
+$brand_white: #fff;
+
+$brand_green: #35eda1;
+
+$cd_green:            #35eda1;
+$cd_horizonblau:        #658898;
+
+$cd_himmelblau: #bfecff;
+$brand_hellblau: $cd_himmelblau;
+
+$cd_mayday_rot:        #ff3652;
+$cd_orange:            #ff8533;
+$cd_yellow:            #ffd633;
+
+// Brands
+$color_kununu: #99c613;
+$color_twitter: #00ACEE;
+$color_facebook: #3B5998;
+$color_whatsapp: #25D366;
+$color_xing: #126567;
+
+$color_link_blue: #538ca6;
+
+$font_color_base: #6c7480;
+$font_color_headline: $color_white;
+$font_color_white: #f1f1f1;
+
+$font_on_accent: $font_color_white;
+$decent_menu_link_color: #555;
+
+$bg_overlay_soft: rgba(255,255,255,0.05);
+$bg_overlay_medium: rgba(255,255,255,0.1);
+$bg_overlay_hard: rgba(255,255,255,0.15);
+
+$bg_overlay_dark_ultra_soft: rgba(17,24,27,0.02);
+$bg_overlay_dark_extra_soft: rgba(17,24,27,0.05);
+$bg_overlay_dark_soft: rgba(17,24,27,0.1);
+$bg_overlay_dark_medium: rgba(17,24,27,0.6);
+$bg_overlay_dark_hard: rgba(17,24,27,0.9);
+
+// General Scales
+$max_content_width: 100%;
+
+// General Styles
+$padding_cells: 2px;
+$padding_default: 1rem;
+$padding_small_screen_sides: $padding_default;
+$padding_large_screen_sides: $padding_default * 2;
+
+
+$border-radius-default: .3rem;
+$box_shadow_default: 5px 5px 10px rgba(0,0,0,0.4);
+$box_shadow_small: 4px 4px 8px rgba(0, 0, 0, 0.26);
+
+$default_container_padding: $padding_default * 2;
+$default_row_padding: $padding_default * 5 0 $padding_default * 5 0;
+$default_row_padding_sm: $padding_default * 2 0 $padding_default * 2 0;
+
+// Fonts
+$font_family_headline: 'Overpass', sans-serif;
+$font_family_body: 'Hind', sans-serif;
+$font_weight_200: 200;
+$font_weight_300: 300;
+$font_weight_normal: 400;
+$font_weight_600: 600;
+$font_weight_700: 700;
+
+$font_weight_headline: $font_weight_200;
+$font_weight_headline_bold: $font_weight_700;
+$font_weight_default: $font_weight_300;
+$font_weight_bold: $font_weight_600;
+
+$font-size-rem: 18px;
+$font-size-rem_c: 27px;
+$font-size-sm: 15px;
+$font-size-micro: 16px;
+
+$font-size-primary: 1.5rem;
+
+$font-size-menu: 1rem;
+$font-size_additional_info: 1.125rem;
+$font-size_button: 16px;
+
+$gr_multiplier: 1.618;
+
+$font-shadow-headline: 2px 2px 12px rgba(0,0,0,0.9);
+
+$font_size_h1: 2em;
+$font_size_h2: 1.5em;
+$font_size_h3: 1.5em;
+$font_size_h4: 1.5em;
+$font_size_h5: 1.5em;
+
+// Buttons
+$button_default_font_color: #fff;
+$button_default_background_color: $color_accent;
+$button_default_hover_color: $color_accent;
+$button_border-radius: .1rem;
+
+$banner_base_height: 120px;
+
+$banner_scrolled_height: 85px;
+
+$animation_speed_fast: 0.12s;
+$animation_speed_default: 0.21s;
+$animation_speed_slow: 0.42s;
+$animation_speed_extra_slow: 0.82s;

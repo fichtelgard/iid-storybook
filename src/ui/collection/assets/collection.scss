@@ -1,0 +1,52 @@
+@import "../../../assets/iid_grid.scss";
+@import "../../../assets/iid_variables.scss";
+@import "../../../assets/iid_mixins.scss";
+
+.card_collection {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: $padding_default / 2 * -1;
+  margin-right: $padding_default / 2 * -1;
+  &.mono {
+    .card {
+      width: 100%;
+    }
+  }
+  &.duo {
+    .card {
+      width: 50%;
+    }
+  }
+  &.tripple {
+    .card {
+      width: 33.3333%;
+    }
+  }
+  &.quad {
+    .card {
+      width: 25%;
+    }
+  }
+  @media screen and (max-width: $screen-sm-max){
+    &.mono {
+      .card {
+        width: 100%;
+      }
+    }
+    &.duo {
+      .card {
+        width: 50%;
+      }
+    }
+    &.tripple {
+      .card {
+        width: 50%;
+      }
+    }
+    &.quad {
+      .card {
+        width: 50%;
+      }
+    }
+  }
+}

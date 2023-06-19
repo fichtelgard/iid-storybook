@@ -1,0 +1,61 @@
+@import "../../../assets/iid_grid.scss";
+@import "../../../assets/iid_variables.scss";
+@import "../../../assets/iid_mixins.scss";
+
+.card {
+  display: flex;
+  padding: $padding_default / 2;
+  aspect-ratio: 4/3;
+
+  .card_inner {
+    display: flex;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: $padding_cells / 2;
+    z-index: 1;
+    background-color: $color_primary;
+  }
+  .card_inner::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    background: radial-gradient(
+                    30rem circle at var(--xPos) var(--yPos),
+                    rgba(var(--colorModifier1), var(--colorModifier2), var(--colorModifier3), 1),
+                    transparent 55%
+    );
+    pointer-events: none;
+  }
+  .card_content {
+    pointer-events: none;
+    opacity: 1;
+    width: 100%;
+    background-color: $color_primary;
+
+    background-size: cover;
+    background-position: 25% 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .card_content_wrapper {
+    position: absolute;
+    left: $padding_default * 1.5;
+    top: $padding_default;
+    font-size: $font-size_additional_info;
+  }
+  .card_title {
+    font-family: $font_family_headline;
+    font-weight: $font_weight_headline;
+    color: $font_color_headline;
+  }
+  .card_text {
+    font-size: $font-size-micro;
+  }
+}

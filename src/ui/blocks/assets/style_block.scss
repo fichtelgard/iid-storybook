@@ -1,0 +1,121 @@
+@import "../../../assets/iid_grid.scss";
+@import "../../../assets/iid_variables.scss";
+@import "../../../assets/iid_mixins.scss";
+
+@mixin headlineColor($color: $color_white) {
+  h1,h2,h3,h4,h5,h6 {
+    color: $color;
+  }
+}
+
+@mixin giantCTALink($color: $color_white) {
+  color: $color;
+  display: inline-block;
+  font-weight: $font_weight_bold;
+  border: 4px solid $color;
+  padding: $padding_default $padding_default * 2;
+  border-radius: 5px;
+}
+
+@mixin infoAdd() {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: $font_size_sm;
+  position: absolute;
+  bottom: -$padding_default;
+}
+
+  .block {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    background-size: cover;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+
+    .block_core {
+      z-index: 3;
+      position: relative;
+    }
+
+    .block_title {
+      padding-top: 2rem;
+      transform: translateY(2rem);
+      text-align: center;
+      font-size: $font_size_h2;
+    }
+
+    &:not(.fullwidth) {
+      .block_core {
+        @include container;
+      }
+    }
+
+    &.highlight,
+    &.highlight_2 {
+      color: $font_color_white;
+      padding: $padding_default * 2 0;
+      margin-bottom: $padding_default;
+      text-align: center;
+      @include headlineColor;
+
+      h1, h2, h3, h4, h5, h6 {
+        margin-bottom: $padding_default /2;
+        margin-top: $padding_default /2;
+      }
+
+      cite {
+        width: 100%;
+        margin: 0;
+
+        a {
+          @include giantCTALink();
+        }
+      }
+
+      span {
+        @include infoAdd();
+      }
+    }
+
+    &.highlight {
+      @include gradient($color_dark, $color_main, 25deg);
+    }
+
+    &.highlight_2 {
+      @include gradient($color_dark, $color_secondary, 25deg);
+    }
+
+    @media screen and (max-width: $screen-lg-max) {
+      &:not(.fullwidth) {
+        padding-left: $padding_large_screen_sides;
+        padding-right: $padding_large_screen_sides;
+      }
+    }
+
+    @media screen and (max-width: $screen-md-max) {
+      &:not(.fullwidth) {
+        padding-left: $padding_small_screen_sides;
+        padding-right: $padding_small_screen_sides;
+      }
+    }
+  }
+
+  .content_block {
+    .block_core {
+      @include content_block;
+    }
+  }
+
+  .centerblock {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+
+    .block_core {
+
+    }
+  }
+

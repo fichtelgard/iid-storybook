@@ -1,0 +1,63 @@
+@import "iid_grid.scss";
+@import "iid_variables.scss";
+@import "iid_icons.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font_family_body;
+  font-weight: $font_weight_default;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+html {
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  font-size: $font_size_rem;
+  overflow-x: hidden;
+  @media screen and (max-width: $screen-sm-max) {
+    font-size: $font_size_sm;
+  }
+}
+
+
+body, html {
+  background-color: $color_body;
+  line-height: 1.42;
+  min-height: 100vh;
+  letter-spacing: 0.01em;
+}
+
+body {
+  color: $font_color_base;
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-primary;
+  overflow-x: hidden;
+  &.lightbox_active {
+    overflow: hidden;
+  }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  display: block;
+  padding: $padding_default * 2 0;
+}
+
+footer {
+  background-color: $color_primary;
+  height: 100px;
+  font-size: $font-size-micro;
+  padding: $padding_default * 2 0;
+}

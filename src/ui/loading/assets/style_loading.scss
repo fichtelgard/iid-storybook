@@ -1,0 +1,96 @@
+@import "../../../assets/iid_grid.scss";
+@import "../../../assets/iid_variables.scss";
+@import "../../../assets/iid_mixins.scss";
+
+
+  .loading_circle {
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    svg:first-child {
+      @include animaterotation($animation_speed_extra_slow);
+
+      .loading_fill {
+        fill: $color_red;
+      }
+    }
+
+    svg:nth-child(2) {
+      @include animaterotation(6s);
+
+      .loading_fill {
+        fill: $color_red;
+      }
+
+      top: 22.5px;
+      left: 22.5px;
+      width: 15px;
+      height: 15px;
+    }
+
+    svg:last-child {
+      @include animaterotation_reverse(3s);
+      width: 34px;
+      height: 34px;
+      top: 13px;
+      left: 13px;
+
+      .loading_fill {
+        fill: $color_red;
+      }
+    }
+
+    &.micro {
+      width: 22px;
+      height: 22px;
+
+      svg:first-child {
+        width: 22px;
+        height: 22px;
+
+        .loading_fill {
+          fill: $color_red;
+        }
+      }
+
+      svg:nth-child(2) {
+        display: none;
+      }
+
+      svg:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .loading_panel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: $padding_default * 4 0;
+  }
+
+  .loading_core {
+    display: block;
+    text-align: center;
+
+    .loading_circle {
+      display: inline-block;
+    }
+  }
+
+  .loading_info {
+    font-size: $font_size_micro;
+    font-weight: $font_weight_bold;
+    font-family: $font_family_headline;
+  }
+

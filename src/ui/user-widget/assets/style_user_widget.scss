@@ -1,0 +1,46 @@
+@import "../../../assets/iid_grid.scss";
+@import "../../../assets/iid_variables.scss";
+@import "../../../assets/iid_mixins.scss";
+
+.user-widget {
+
+  display: inline-block;
+  align-items: center;
+  .user-widget-core {
+    display: flex;
+    border-radius: 27px;
+    align-items: center;
+    background-color: lighten($color_primary, 5%);
+    font-size: $font-size-micro;
+    border: 4px solid $bg_overlay_medium;
+    color: lighten($font_color_base, 10%);
+    @include animated(all, $animation_speed_default);
+    .user-widget-avatar {
+      width: 50px;
+      aspect-ratio: 1/1;
+      border-radius: 100%;
+    }
+    .user-widget-content {
+      padding: 0 $padding_default * 2 0 $padding_default;
+      @include animated(all, $animation_speed_default);
+    }
+    &:hover {
+      border-color: $color_accent;
+    }
+  }
+  &.online {
+    .user-widget-avatar {
+      @include gradient($color_green, $color_dark, 45deg);
+    }
+    &:hover {
+      .user-widget-core {
+        border-color: $color_green;
+      }
+    }
+  }
+  &.offline {
+    .user-widget-avatar {
+      @include gradient($bg_overlay_medium, $color_dark, 45deg);
+    }
+  }
+}

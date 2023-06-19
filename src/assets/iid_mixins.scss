@@ -1,0 +1,200 @@
+@import "iid_grid.scss";
+@import "iid_variables.scss";
+
+@mixin cell() {
+  padding: $padding_default / 4;
+  font-family: monospace;
+  border: 2px solid $bg_overlay_dark_soft;
+  font-size: $font-size_primary;
+  border-radius: $border-radius-default;
+  text-align: right;
+  background-color: $color_white;
+  max-width: 100%;
+  line-height: 1.22;
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin border_top {
+  margin-top: $padding_default / 2;
+  padding-top: $padding_default / 2;
+  border-top: 1px solid $bg_overlay_dark_soft;
+}
+
+@mixin bri-icons() {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'bri-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$skewing: 1.3deg;
+
+@mixin visible_pseudo_abs() {
+  content: '';
+  display: block;
+  position:absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@mixin list_icon() {
+  position: relative;
+  padding-right: $padding_default * 1.2;
+  &:before {
+    @include bri-icons();
+    content: '\e90e';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color_main;
+    font-size: 1em;
+    left: 0;
+  }
+}
+
+@mixin list_item_default_style() {
+  position: relative;
+  padding-left: 1.3em;
+  @include list_icon();
+}
+
+@mixin transition($time) {
+  $transition: all $time ease;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin centered_loading_circle {
+  .loading_circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+}
+
+$cubic_01: cubic-bezier(.67,.11,.08,1.9);
+
+@mixin animated($property, $time, $ease : ease-out) {
+  -webkit-transition: $property $time $ease;
+  -moz-transition: $property $time $ease;
+  -o-transition: $property $time $ease;
+  transition: $property $time $ease;
+}
+
+@mixin gradient($color_01, $color_02, $degrees: 90deg, $start_percentage: 0%, $end_percentage: 100%) {
+  /* Old browsers */
+  background: $color_01; /* Old browsers */
+  /* FF3.6-15 */
+  background: -moz-linear-gradient($degrees, $color_01 $start_percentage, $color_02 $end_percentage);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient($degrees, $color_01 $start_percentage, $color_02 $end_percentage);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient($degrees, $color_01 $start_percentage, $color_02 $end_percentage);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color_01', endColorstr='$color_02', GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@-webkit-keyframes gradient_animation_basic {
+  0%{background-position:93% 0}
+  50%{background-position:0 100%}
+  100%{background-position:93% 0}
+}
+@-moz-keyframes gradient_animation_basic {
+  0%{background-position:93% 0}
+  50%{background-position:0 100%}
+  100%{background-position:93% 0}
+}
+@keyframes gradient_animation_basic {
+  0%{background-position:93% 0}
+  50%{background-position:0 100%}
+  100%{background-position:93% 0}
+}
+
+@mixin gradient_animated($color_01, $color_02, $degrees: 90deg, $animation_speed: 20s, $animation_name:'gradient_animation_basic', $animation_ease: ease) {
+  @include gradient($color_01, $color_02, $degrees);
+  background-size: 400% 400%;
+  -webkit-animation: gradient_animation_basic $animation_speed $animation_ease infinite;
+  -moz-animation: gradient_animation_basic $animation_speed $animation_ease infinite;
+  animation: gradient_animation_basic $animation_speed $animation_ease infinite;
+}
+
+@keyframes rotate {
+  0%{transform:rotateZ(0)}
+  100%{transform:rotateZ(360deg)}
+}
+
+@keyframes rotate_reverse {
+  0%{transform:rotateZ(0) rotateY(180deg)}
+  100%{transform:rotateZ(-360deg) rotateY(180deg)}
+}
+
+@mixin animaterotation($speed, $animation_ease: linear) {
+  -webkit-animation: rotate $speed $animation_ease infinite;
+  -moz-animation: rotate $speed $animation_ease infinite;
+  animation: rotate $speed $animation_ease infinite;
+}
+
+@mixin animaterotation_reverse($speed, $animation_ease: linear) {
+  -webkit-animation: rotate_reverse $speed $animation_ease infinite;
+  -moz-animation: rotate_reverse $speed $animation_ease infinite;
+  animation: rotate_reverse $speed $animation_ease infinite;
+}
+
+@mixin container() {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  @media screen and (min-width: $screen-xs-min) {
+    max-width: $screen-xs-width;
+  }
+  @media screen and (min-width: $screen-sm-min) {
+    max-width: $screen-xs-width;
+  }
+  @media screen and (min-width: $screen-md-min) {
+    max-width: $screen-md-width;
+  }
+  @media screen and (min-width: $screen-lg-min) {
+    max-width: $screen-lg-width;
+  }
+  @media screen and (min-width: $screen-xl-min) {
+    max-width: $screen-xl-width;
+  }
+}
+
+@mixin content_block {
+  padding: 0 0 $default_container_padding 0;
+}
+
+@mixin abs_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@mixin visible_subnavmenu() {
+  opacity: 1;
+  transform: translateY(100%);
+  pointer-events: auto;
+  background-color: $color_white;
+}
+

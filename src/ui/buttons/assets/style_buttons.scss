@@ -1,0 +1,109 @@
+@import "../../../assets/iid_grid.scss";
+@import "../../../assets/iid_variables.scss";
+@import "../../../assets/iid_mixins.scss";
+
+@mixin button_loading_circle_color($color: $color_white) {
+  .loading_circle {
+    svg {
+      .loading_fill {
+        fill: $color !important;
+      }
+    }
+  }
+}
+
+@mixin button {
+  display: inline-block;
+  position: relative;
+  padding: $font-size_button / $gr_multiplier $font-size_button * $gr_multiplier $font-size_button / $gr_multiplier / 1.1 $font-size_button * $gr_multiplier;
+  font-size: $font-size_button;
+  border-radius: $border-radius-default / 1.5;
+  border: 3px solid transparent;
+  background-color: $color_accent;
+  color: $color_white;
+  word-break: initial;
+
+  font-family: $font_family_headline;
+  font-weight: $font_weight_headline_bold;
+  span {
+    color: $color_white;
+    font-family: $font_family_headline;
+    font-weight: $font_weight_headline_bold;
+  }
+  @include animated(all, $animation_speed_fast, $cubic_01);
+  .loading_circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  &.loading {
+    color: transparent;
+    text-shadow: none;
+    pointer-events: none;
+  }
+  &:hover {
+    background-color: lighten($color_main, 8%);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  &:disabled,
+  &.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: none;
+  }
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+  .bri-icons {
+    transform: translateY(1px) scale(1);
+
+    opacity: 1;
+
+    & + div,
+    & + span {
+      margin-left: $padding_cells * 2;
+    }
+  }
+
+  &.btn_default {
+    background-color: $color_white;
+    color: $color_dark;
+    span {
+      color: $color_dark;
+    }
+  }
+
+}
+
+.btn {
+  @include button;
+
+  & + .btn {
+    margin-left: $padding_cells;
+  }
+}
+
+.btn_none {
+  background-color: transparent;
+  color: $color_dark;
+  border-color: $bg_overlay_dark_extra_soft;
+
+  &:hover {
+    color: $color_white;
+  }
+}
+
+.btn_tiny {
+  font-size: $font_size_micro !important;
+  padding: $padding_cells $padding_default / 3 !important;
+  background-color: $bg_overlay_dark_extra_soft;
+  color: $bg_overlay_dark_hard;
+
+  &:hover {
+    background-color: $bg_overlay_dark_soft;
+  }
+}
+

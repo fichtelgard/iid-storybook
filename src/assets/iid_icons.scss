@@ -1,0 +1,344 @@
+@font-face {
+  font-family: 'breheimen-icons';
+  src:  url('fonts/breheimen-icons.eot?84dvkd');
+  src:  url('fonts/breheimen-icons.eot?84dvkd#iefix') format('embedded-opentype'),
+  url('fonts/breheimen-icons.ttf?84dvkd') format('truetype'),
+  url('fonts/breheimen-icons.woff?84dvkd') format('woff'),
+  url('fonts/breheimen-icons.svg?84dvkd#breheimen-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="bri-icons-"], [class*=" bri-icons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'breheimen-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.bri-icons-heart:before {
+  content: "\e901";
+}
+.bri-icons-menu-burger:before {
+  content: "\e902";
+}
+.bri-icons-add:before {
+  content: "\e903";
+}
+.bri-icons-add-circle:before {
+  content: "\e904";
+}
+.bri-icons-lock:before {
+  content: "\e905";
+}
+.bri-icons-more-vert:before {
+  content: "\e906";
+}
+.bri-icons-apps:before {
+  content: "\e907";
+}
+.bri-icons-settings:before {
+  content: "\e908";
+}
+.bri-icons-notifications:before {
+  content: "\e909";
+}
+.bri-icons-infinity:before {
+  content: "\e90a";
+}
+.bri-icons-verified-user:before {
+  content: "\e90c";
+}
+.bri-icons-chevron-left:before {
+  content: "\e90d";
+}
+.bri-icons-chevron-right:before {
+  content: "\e90e";
+}
+.bri-icons-close:before {
+  content: "\e90f";
+}
+.bri-icons-menu-burger-top:before {
+  content: "\e910";
+}
+.bri-icons-menu-burger-center:before {
+  content: "\e911";
+}
+.bri-icons-menu-burger-bottom:before {
+  content: "\e912";
+}
+.bri-icons-nafary-compass-core:before {
+  content: "\e913";
+}
+.bri-icons-checkbox-empty:before {
+  content: "\e914";
+}
+.bri-icons-checkbox-checked:before {
+  content: "\e915";
+}
+.bri-icons-checkbox-empty-filled:before {
+  content: "\e916";
+}
+.bri-icons-checkbox-filled-checked:before {
+  content: "\e917";
+}
+.bri-icons-checkbox-frame:before {
+  content: "\e918";
+}
+.bri-icons-checkbox-hook:before {
+  content: "\e919";
+}
+.bri-icons-notification-circle:before {
+  content: "\e91b";
+}
+.bri-icons-notification-circle-empty:before {
+  content: "\e91c";
+}
+.bri-icons-heart_outline:before {
+  content: "\e91d";
+}
+.bri-icons-globe:before {
+  content: "\e91e";
+}
+.bri-icons-search:before {
+  content: "\e91f";
+}
+.bri-icons-office:before {
+  content: "\e920";
+}
+.bri-icons-folder:before {
+  content: "\e921";
+}
+.bri-icons-mail:before {
+  content: "\e923";
+}
+.bri-icons-info11:before {
+  content: "\e926";
+}
+.bri-icons-rewind:before {
+  content: "\e900";
+}
+.bri-icons-kununu:before {
+  content: "\e928";
+}
+.bri-icons-map_marker:before {
+  content: "\e92b";
+}
+.bri-icons-facebook:before {
+  content: "\ea90";
+}
+.bri-icons-instagram:before {
+  content: "\ea92";
+}
+.bri-icons-whatsapp:before {
+  content: "\ea93";
+}
+.bri-icons-twitter:before {
+  content: "\ea96";
+}
+.bri-icons-vk:before {
+  content: "\ea98";
+}
+.bri-icons-rss:before {
+  content: "\ea9b";
+}
+.bri-icons-youtube:before {
+  content: "\ea9d";
+}
+.bri-icons-vimeo:before {
+  content: "\eaa0";
+}
+.bri-icons-dropbox:before {
+  content: "\eaae";
+}
+.bri-icons-github:before {
+  content: "\eab0";
+}
+.bri-icons-tux:before {
+  content: "\eabd";
+}
+.bri-icons-appleinc:before {
+  content: "\eabe";
+}
+.bri-icons-android:before {
+  content: "\eac0";
+}
+.bri-icons-skype:before {
+  content: "\eac5";
+}
+.bri-icons-linkedin2:before {
+  content: "\eaca";
+}
+.bri-icons-stackoverflow:before {
+  content: "\ead0";
+}
+.bri-icons-pinterest:before {
+  content: "\ead1";
+}
+.bri-icons-xing2:before {
+  content: "\ead4";
+}
+.bri-icons-paypal:before {
+  content: "\ead8";
+}
+.bri-icons-pencil:before {
+  content: "\e92d";
+}
+.bri-icons-droplet:before {
+  content: "\e92e";
+}
+.bri-icons-download1:before {
+  content: "\e90b";
+}
+.bri-icons-redo21:before {
+  content: "\e91a";
+}
+.bri-icons-cog:before {
+  content: "\e994";
+}
+.bri-icons-power:before {
+  content: "\e9b5";
+}
+.bri-icons-link:before {
+  content: "\e9cb";
+}
+.bri-icons-attachment:before {
+  content: "\e9cd";
+}
+.bri-icons-warning:before {
+  content: "\ea07";
+}
+.bri-icons-notification:before {
+  content: "\ea08";
+}
+.bri-icons-cancel-circle:before {
+  content: "\ea0d";
+}
+.bri-icons-info:before {
+  content: "\ea0c";
+}
+.bri-icons-blocked:before {
+  content: "\ea0e";
+}
+.bri-icons-circle-up:before {
+  content: "\ea41";
+}
+.bri-icons-circle-right:before {
+  content: "\ea42";
+}
+.bri-icons-circle-down:before {
+  content: "\ea43";
+}
+.bri-icons-circle-left:before {
+  content: "\ea44";
+}
+.bri-icons-share2:before {
+  content: "\ea82";
+}
+.bri-icons-home:before {
+  content: "\e922";
+}
+.bri-icons-file-empty:before {
+  content: "\e924";
+}
+.bri-icons-files-empty:before {
+  content: "\e925";
+}
+.bri-icons-file-picture:before {
+  content: "\e927";
+}
+.bri-icons-coin-dollar:before {
+  content: "\e93b";
+}
+.bri-icons-coin-euro:before {
+  content: "\e93c";
+}
+.bri-icons-coin-pound:before {
+  content: "\e93d";
+}
+.bri-icons-coin-yen:before {
+  content: "\e93e";
+}
+.bri-icons-download:before {
+  content: "\e960";
+}
+.bri-icons-redo2:before {
+  content: "\e968";
+}
+.bri-icons-trophy:before {
+  content: "\e99e";
+}
+.bri-icons-rocket:before {
+  content: "\e9a5";
+}
+.bri-icons-target:before {
+  content: "\e9b3";
+}
+.bri-icons-shield:before {
+  content: "\e9b4";
+}
+.bri-icons-star-empty:before {
+  content: "\e9d7";
+}
+.bri-icons-star-half:before {
+  content: "\e9d8";
+}
+.bri-icons-star-full:before {
+  content: "\e9d9";
+}
+.bri-icons-checkmark:before {
+  content: "\ea10";
+}
+.bri-icons-checkmark2:before {
+  content: "\ea11";
+}
+.bri-icons-embed:before {
+  content: "\ea7f";
+}
+.bri-icons-embed2:before {
+  content: "\ea80";
+}
+.bri-icons-terminal:before {
+  content: "\ea81";
+}
+.bri-icons-loop2:before {
+  content: "\ea2e";
+}
+.bri-icons-warning1:before {
+  content: "\ea09";
+}
+.bri-icons-fire:before {
+  content: "\e9a9";
+}
+.bri-icons-info1:before {
+  content: "\ea0f";
+}
+.bri-icons-chart-pie:before {
+  content: "\e92a";
+}
+.bri-icons-download-document:before {
+  content: "\e933";
+}
+.bri-icons-upload-document:before {
+  content: "\e936";
+}
+.bri-icons-goal-flag:before {
+  content: "\e930";
+}
+.bri-icons-cog1:before {
+  content: "\e995";
+}
+.bri-icons-spinner6:before {
+  content: "\e97f";
+}
+.bri-icons-phone:before {
+  content: "\e942";
+}
