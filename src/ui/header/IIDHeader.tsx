@@ -17,7 +17,7 @@ function IIDHeader(props: IIDHeaderProps) {
         <div className={"logo"}>
           <img src={logo} alt={"Logo"} />
         </div>
-        <div>{props.title}</div>
+        <div>{props.title} #nice</div>
         <Spacer />
         <UserWidget loggedIn={false} />
       </BlockUI>
